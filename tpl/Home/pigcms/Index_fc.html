@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>功能介绍－{pigcms::C('site_title')}</title>
+<include file="Public:header"/>
+<style type="text/css">
+.main{
+padding: 10px 0 0 10px;;
+border: 1px solid #c7cdd6;
+background: #f5f6f7;
+box-shadow: 0px 1px 3px #ccc;
+}
+<!--
+#table {width:100%;background:#ffffff; overflow:auto;}
+.menubg{
+/*background: url({pigcms::RES}/images/img/current-.gif) repeat-y 170px top;*/
+overflow-x: hidden;
+overflow-y: auto;
+border-top:1px solid #EEEEEE;
+border-left:1px solid #EEEEEE;
+}
+.menu0 div{
+line-height:20px;
+display:block;
+float:left;
+padding:2px 0px;
+width:155px;
+text-align: left;
+text-indent: 10px;
+cursor:pointer;
+color:  #000000;
+border-right: 1px solid #EEEEEE;
+border-bottom: 1px solid #EEEEEE;
+font-size:12px;position: relative;
+}
+.menu0 div.hover{
+color: #FFFFFF;
+text-shadow: 0 1px 1px #467809;
+
+background-color:#08a006;
+/*background:#fff url({pigcms::RES}/images/img/current.gif) no-repeat right center;*/
+}
+.menu0 div span{
+ background: url({pigcms::RES}/images/img/icon_new.gif) no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    display: block;
+    height: 11px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 23px;
+    z-index: 10;
+right: 5px;
+    top: 6px;
+}
+#main0 div{margin:15px 10px;
+display: none;text-decoration: none; word-wrap: break-word;
+}
+#main0 div.block{margin:15px;
+
+display: block;text-decoration: none;word-wrap: break-word;
+}
+h3{ font-size: 16px; color:#08a006}
+.marginb{ margin-bottom:15px;display: block;}
+#mediaplayer {
+	
+    background-color: #000000;
+    color: #FFFFFF;
+    height: 615px;
+    position: relative;
+    width: 820px;
+	top:0;
+	right:0;
+}
+.section { border:0; margin:0; padding:0}
+.section p{padding-top:0;margin-top:0; font-size:14px;/*text-indent: 2em;*/}
+.normalContent {
+    padding: 20px;
+}
+-->
+</style>
+<script>
+function setTab(m,n){
+var tli=document.getElementById("menu"+m).getElementsByTagName("div");
+var mli=document.getElementById("main"+m).getElementsByTagName("div");
+for(i=0;i<tli.length;i++){
+   tli[i].className=i==n?"hover":"";
+   mli[i].style.display=i==n?"block":"none";
+}
+}
+</script>
+
+
+   
+<div class="div_line">
+  <div class="link_center"><p class="marke_font">功能介绍</p>
+</div>
+</div>
+<div style="width: 1080px;margin: 0px auto;">
+ <p><img src="http://v.24so.com/tpl/Home/pigcms/common/images/gongneng.jpg"></br></br></p>
+ 
+</div>
+
+ <div class="tab1" id="tab1">
+	<div class="menu">
+		<ul>
+			<li id="one1" onclick="setTab('one',1)" class="off">刮刮卡</li>
+			<li id="one2" onclick="setTab('one',2)" class="">幸运大转盘</li>
+			<li id="one3" onclick="setTab('one',3)" class="">优惠劵</li>
+			<li id="one4" onclick="setTab('one',4)" class="">3G相册</li>
+			<li id="one5" onclick="setTab('one',5)" class="">附近店铺</li>
+                        <li id="one6" onclick="setTab('one',6)" class="">微信墙</li>
+                        <li id="one7" onclick="setTab('one',7)" class="">微官网</li>
+                         <li id="one8" onclick="setTab('one',8)" class="">微商城</li>
+                        <li id="one9" onclick="setTab('one',9)" class="">其他功能</li>
+		</ul>
+        <div style="clear:both;"></div>
+	</div>
+	<div class="menudiv">
+	<div id="con_one_1" style="display: block;"> <p>开启此功能，直接发布刮刮卡刮奖活动，设置活动内容、奖项及中将比例，带给粉丝完全不同的感受。</p>
+<p>输入“刮刮卡”体验此互动活动</p>
+<p style=" color:#F00">备注：目前安卓4.1的系统跟微信4.5有些兼容性问题，导致刮刮卡不能刮，还是可以抽奖，就是少了刮的体验，其他都正常，如果介意的话，请等待微信升级解决此问题后再使用，或者换其他活动。</p>
+                                </span>
+                                <img alt="" src="./tpl/Home/pigcms/common/images/demo/gn034.jpg">
+<img alt="" src="./tpl/Home/pigcms/common/images/demo/gn034-2.jpg"></div>
+	<div id="con_one_2" style="display: none;"><p>开启此功能，直接发布幸运大转盘活动，设置活动内容、奖项及中将比例，带给粉丝完全不同的感受。</p>
+<p>输入"大转盘"体验此互动活动</p>
+                                </span>
+                                <img alt="" src="./tpl/Home/pigcms/common/images/demo/gn035.jpg">
+<img alt="" src="./tpl/Home/pigcms/common/images/demo/gn035-2.jpg">
+</div>
+	<div id="con_one_3" style="display: none;">开启此功能，直接发布优惠券活动，设置活动内容、奖项等，带给粉丝完全不同的感受。</p>
+<p>输入"优惠券"体验此互动活动</p>
+                                </span>
+                                <img alt="" src="./tpl/Home/pigcms/common/images/demo/gn036.jpg">
+<img alt="" src="./tpl/Home/pigcms/common/images/demo/gn036-2.jpg">
+</div>
+	<div id="con_one_4" style="display: none;"><p>
+									开启此功能,只需要设置相册名称，相册封面图及上传图片，就可以得到一个精美的相册网站。
+									非常适合婚纱行业、汽车行业或者需要展示产品图片的商家。
+									下面是效果图及简单的操作说明。
+								</p>
+                                </span>
+                                <img alt="" src="images/3gphoto.jpg" width="99%">
+</div>
+
+<div id="con_one_5" style="display: none;"><p>开启此功能，直接发送地理位置信息，然后输入“附近便利店”</p>
+                                </span>
+                                <img alt="" src="./tpl/Home/pigcms/common/images/demo/gn033.jpg">
+<img alt="" src="./tpl/Home/pigcms/common/images/demo/gn033-2.jpg">
+
+</div>
+<div id="con_one_6" style="display: none;">会议或活动现场,通过投影大银幕出现的微信墙,与现场粉丝进行互动,扫描二维码即可参与活动的发言,抽奖,留言等互动功能,商家可大量增加粉丝,达到宣传效果,同时参与活动活动者可连接在一起,让每位在场人员都有权发言,提高活动的互动性.
+</div>
+<div id="con_one_7" style="display: none;">微官网即通过微信入口访问的手机网站,,通过微网站展示企业的产品与服务,活动,荣誉等信息让用户随时随地可查询到企业的全部信息.让您的公众平台发挥更大价值.,内置一键拨号与一键导航功能便于客户联系与来访。
+</div>
+<div id="con_one_8" style="display: none;">微信中输入“商城”会自动回复，可以设置商品分类，支持商品搜索，多种属性排序，多商品购物车结算，瀑布流展示。</div>
+<div id="con_one_9" style="display: none;">更多神秘功能将陆续推出
+</div>
+
+
+
+	</div><div style="clear:both;"></div>
+</div>  
+<script type="text/javascript">try{Dd('webpage_7').className='left_menu_on';}catch(e){}</script>
+
+<script type="text/javascript">
+function setTab(name,cursel){
+	cursel_0=cursel;
+	for(var i=1; i<=links_len; i++){
+		var menu = document.getElementById(name+i);
+		var menudiv = document.getElementById("con_"+name+"_"+i);
+		if(i==cursel){
+			menu.className="off";
+			menudiv.style.display="block";
+		}
+		else{
+			menu.className="";
+			menudiv.style.display="none";
+		}
+	}
+}
+function Next(){                                                        
+	cursel_0++;
+	if (cursel_0>links_len)cursel_0=1
+	setTab(name_0,cursel_0);
+} 
+var name_0='one';
+var cursel_0=1;
+
+var links_len,iIntervalId;
+onload=function(){
+	var links = document.getElementById("tab1").getElementsByTagName('li')
+	links_len=links.length;
+	for(var i=0; i<links_len; i++){
+		links[i].onmouseover=function(){
+			clearInterval(iIntervalId);
+			this.onmouseout=function(){
+				iIntervalId = setInterval(Next,ScrollTime);;
+			}
+		}
+	}
+	document.getElementById("con_"+name_0+"_"+links_len).parentNode.onmouseover=function(){
+		clearInterval(iIntervalId);
+		this.onmouseout=function(){
+			iIntervalId = setInterval(Next,ScrollTime);;
+		}
+	}
+	setTab(name_0,cursel_0);
+	iIntervalId = setInterval(Next,ScrollTime);
+}
+</script><include file="Public:footer"/>

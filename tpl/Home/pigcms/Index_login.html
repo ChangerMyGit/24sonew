@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>登陆与注册－{pigcms:$f_siteTitle}</title>
+<meta name="keywords" content="微信帮手 微信公众账号 微信公众平台 微信公众账号开发 微信二次开发 微信接口开发 微信托管服务 微信营销 微信公众平台接口开发"/>
+<meta name="description" content="微信公众平台接口开发、托管、营销活动、二次开发"/>
+
+
+<include file="Public:header_login"/>
+
+<!-- nav end -->
+<style>
+.submit{background: #348FD4;
+color: #fff;
+font-size: 16px;
+height: 30px;
+line-height: 21px;
+padding: 0 24px;
+vertical-align: middle;
+border: 0;
+cursor: pointer;}
+
+.text {
+height: 24px;
+width: 250px;
+line-height: 24px;
+padding: 3px;
+border: 1px solid #ccc;
+}
+
+.login {
+color: #6a6969;
+font-family: "黑体";
+}
+</style>
+
+<DIV id=con>
+<UL id=tags>
+  <LI  class=selectTag><A onClick="selectTag('tagContent0',this)" 
+  href="javascript:void(0)">登录</A> </LI>
+  <LI><A onClick="selectTag('tagContent1',this)" 
+  href="javascript:void(0)">注册</A> </LI>
+  </UL>
+
+<DIV id=tagContent>
+<DIV class="tagContent selectTag" id=tagContent0>
+<a id="login"></a>
+<div class="tagContent_main">
+
+   <div class="tagContent_lf"  >
+   
+   <form action="{pigcms::U('Users/checklogin')}" method="post" class="login">
+                <table  cellpadding="7.5px">
+                    <tbody><tr>
+                        <th>用户名</th>
+                        <td>
+                            <input class="text" type="text" name="username">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>密　码</th>
+                        <td>
+                            <input class="text" type="password" name="password">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>验证码</th>
+                        <td>
+                        <script>
+                        function refreshImg2(){
+                        	document.getElementById("txtCheckCode2").src="/index.php?m=Index&a=verifyLogin&s="+Math.random();
+                        }
+                        </script>
+                        <input name="verifycode2" type="text" size="8" style="width:80px;" class="text" maxlength="4" />&nbsp;<img src="{pigcms::U('Index/verifyLogin')}" id="txtCheckCode2"/>&nbsp;<a href="javascript:refreshImg2();" style="color:#666">看不清？换一张</a></td>
+                    </tr>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <td>
+                            <input class="submit" type="submit" value="登录">
+                        </td>
+                    </tr>
+					<tr>
+                        <th>&nbsp;</th>
+                        <td>&nbsp;
+                            
+                        </td>
+                    </tr><tr>
+                        <th>&nbsp;</th>
+                        <td>&nbsp;
+                            
+                        </td>
+                    </tr>
+					   <tr>
+                        <th>帐号审核：</th>
+                        <td>
+                            QQ:{pigcms:$f_qq}
+                        </td>
+                    </tr>
+                </tbody></table>
+            </form>
+   
+   
+   
+   
+   
+   </div>
+   <p class="tagContent_rg"><img src="image/Longin1.jpg"></p>
+</div>
+<div style="clear:both;"></div>
+</DIV>
+
+<DIV class="tagContent" id=tagContent1>
+
+<div class="tagContent_main">
+   <div class="tagContent_lf" >
+   
+   
+     <form action="{pigcms::U('Users/checkreg')}" method="post" class="login">
+                <table cellpadding="7.5px">
+                    <tbody><tr>
+                        <th><a id="reg">用户名</a></th>
+                        <td>
+                            <input class="text" required="" value="请输入用户名" onclick="if(this.value=='请输入用户名'){this.value=''}" onblur="if(this.value==''){this.value='请输入用户名'}" type="text" name="username">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>密　码</th>
+                        <td>
+                            <input class="text" type="password" name="password">
+                        </td>
+                    </tr>
+					 <tr>
+                        <th>重复密码</th>
+                        <td>
+                            <input class="text" type="password" name="repassword">
+                        </td>
+                    </tr>
+                    <php>if($f_regNeedMp){</php>
+                    <tr>
+                        <th>手　机</th>
+                        <td>
+                            <input class="text" type="text" name="mp" />
+                        </td>
+                    </tr>
+                    <php>}</php>
+					<tr>
+                        <th>邮　箱</th>
+                        <td>
+                            <input class="text" type="text" name="email" value="" onclick="if(this.value=='请输入电子邮箱'){this.value=''}" onblur="if(this.value==''){this.value=''}">
+                        </td>
+                    </tr>
+                     <tr>
+                        <th>验证码</th>
+                        <td>
+                        <script>
+                        function refreshImg(){
+                        	document.getElementById("txtCheckCode").src="/index.php?m=Index&a=verify&s="+Math.random();
+                        }
+                        </script>
+                        <input name="verifycode" type="text" size="4" style="width:80px;" class="text" maxlength="4" />&nbsp;<img src="{pigcms::U('Index/verify')}" id="txtCheckCode"/>&nbsp;<a href="javascript:refreshImg();" style="color:#666">看不清？换一张</a></td>
+                    </tr>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <td><input class="text" type="hidden" name="invitecode" value="<?php echo $_GET['invitecode'];?>">
+                            <input class="submit" type="submit" value="注册">
+                        </td>
+                    </tr>
+                    
+                       
+					<tr>
+                        <th>&nbsp;</th>
+                        <td>&nbsp;
+                            
+                        </td>
+                    </tr>
+					   <tr>
+                        <th>帐号审核：</th>
+                        <td>
+                            QQ:{pigcms:$f_qq}
+                        </td>
+                    </tr>
+                </tbody></table>
+            </form>
+   
+   
+   
+   </div>
+   <p class="tagContent_rg"><img src="image/Longin2.jpg"></p>
+</div>
+<div style="clear:both;"></div>
+</DIV>
+</DIV>
+</DIV>
+<SCRIPT type=text/javascript>
+function selectTag(showContent,selfObj){
+	// 操作标签
+	var tag = document.getElementById("tags").getElementsByTagName("li");
+	var taglength = tag.length;
+	for(i=0; i<taglength; i++){
+		tag[i].className = "";
+	}
+	selfObj.parentNode.className = "selectTag";
+	// 操作内容
+	for(i=0; j=document.getElementById("tagContent"+i); i++){
+		j.style.display = "none";
+	}
+	document.getElementById(showContent).style.display = "block";
+	
+	
+}
+</SCRIPT>
+<script type="text/javascript">try{Dd('webpage_6').className='left_menu_on';}catch(e){}</script>
+<include file="$includeFooterPath"/>

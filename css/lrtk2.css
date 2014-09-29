@@ -1,0 +1,52 @@
+BODY {
+	FONT-FAMILY: "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 14px; PADDING-TOP: 0px
+}
+* A {POSITION: relative}
+
+/*定义文字样式*/
+A {FONT-SIZE: 14px; COLOR: #000;CURSOR: pointer}
+A:link {COLOR: #333; TEXT-DECORATION: none;OUTLINE-STYLE: none}
+A:visited {COLOR: #333; TEXT-DECORATION: none;}
+A:hover {COLOR: #333; TEXT-DECORATION:underline;}
+A:active {COLOR: #333; TEXT-DECORATION: none;OUTLINE-STYLE: none}
+
+
+
+#featureContainer {
+	 MARGIN: 0px auto; WIDTH: 1080px;
+}
+
+#feature {
+	 POSITION: relative; MARGIN-TOP: 5px;
+}
+#feature .button {
+	 POSITION: absolute; BORDER-LEFT: #999 0px dotted; WIDTH: 1000px;  TOP: 72px; LEFT: 0px
+}
+#feature .prev {
+	 TEXT-INDENT: -9999px; WIDTH: 23px; DISPLAY: block; BACKGROUND: url(../image/24so_lf.jpg) center top; FLOAT: left; HEIGHT: 80px; BORDER-TOP: #999 0px dotted; TOP: -155px; 
+}
+#feature .next {
+	 TEXT-INDENT: -9999px; WIDTH: 23px; DISPLAY: block; BACKGROUND: url(../image/24so_rg.jpg) center top; FLOAT: right; HEIGHT: 80px; BORDER-TOP: #999 0px dotted; TOP: -155px; BORDER-RIGHT: #999 0px dotted
+}
+
+.featureUL {
+	 POSITION: relative; LIST-STYLE-TYPE: none; MARGIN: 0px; WIDTH: 2800px; FLOAT: left; LEFT: 0px
+}
+.featureBox {
+	 WIDTH: 340px; HEIGHT: 228px; FLOAT: left; OVERFLOW: hidden;}
+	 
+#botton-scroll {
+	Z-INDEX: 0; WIDTH: 1000px; FLOAT: left;  HEIGHT: 228px; 
+}
+#block {
+	Z-INDEX: 0; POSITION: relative; margin-left:20px; WIDTH: 1080px; HEIGHT: 228px; OVERFLOW: hidden;
+}
+#block .box {
+	 MARGIN: 0px 30px; WIDTH: 300px; FLOAT: left; HEIGHT: 228px;
+}
+#block .box .feature-title {
+	FONT-SIZE: 140%; FONT-WEIGHT: normal
+}
+#block .box .feature-thumb {
+	WIDTH: 240px; MARGIN-BOTTOM: 5px; FLOAT: left; HEIGHT: 150px
+}
